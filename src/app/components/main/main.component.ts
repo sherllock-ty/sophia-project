@@ -272,6 +272,8 @@ export class MainComponent implements OnInit {
   ngAfterViewInit() {
   }
 
+
+
   ngOnInit() {
     this.currency = this.currencies[0];
     this.flag = this.flags[0];

@@ -10,8 +10,10 @@
                  <div class="product-info-wrapper">
                     <span class="category">{{product.category}}</span>
                     <div class="title-wrap">
-                       <h4 [routerLink]="['/home/product', product.id]" (click)="goTop()">{{product.name}}</h4>
-                    </div>
+                     <a class="no-violet" [routerLink]="['/home/product', product.id]" (click)="goTop()">
+                       <h4>{{product.name}}</h4>
+                     </a>
+                     </div>
                     <div class="stars">
                        <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
                        <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
