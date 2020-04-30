@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     ]
   },
   {
-    path: '123',
+    path: '**',
     redirectTo: 'home'
   }
 ];
