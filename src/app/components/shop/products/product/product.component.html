@@ -8,7 +8,9 @@
      <div class="product-info-wrapper">
         <span class="category">{{product.category}}</span>
         <div class="title-wrap">
+         <a class="no-violet" [routerLink]="['/home/product', product.id]">
            <h4>{{product.name}}</h4>
+         </a>
         </div>
         <div class="stars">
            <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
