@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
-// import { CheckoutComponent } from './checkout/checkout.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 // import { WishlistComponent } from './wishlist/wishlist.component';
 // import { CompareComponent } from './compare/compare.component';
@@ -19,7 +19,7 @@ const routes: Routes = [
     children: [
       { path: 'about', component: AboutUsComponent },
       { path: 'cart', component: CartComponent },
-      // { path: 'checkout', component: CheckoutComponent },
+      { path: 'checkout', component: CheckoutComponent },
       // { path: 'faq', component: FaqComponent },
       { path: 'contact', component: ContactComponent },
       // { path: 'wishlist', component: WishlistComponent },
