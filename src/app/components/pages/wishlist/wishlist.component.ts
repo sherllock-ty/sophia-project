@@ -15,8 +15,8 @@ export class WishlistComponent implements OnInit {
   wishlistItems  :   Product[] = [];
 
   constructor(private cartService: CartService, private wishlistService: WishlistService) {
-    this.product = this.wishlistService.getProducts();
-    this.product.subscribe(products => this.wishlistItems = products);
+    // this.product = this.wishlistService.getProducts();
+    // this.product.subscribe(products => this.wishlistItems = products);
   }
 
   ngOnInit() {
@@ -26,12 +26,14 @@ export class WishlistComponent implements OnInit {
  public addToCart(product: Product,  quantity: number = 1) {
   if (quantity > 0)
    this.cartService.addToCart(product,quantity);
-   this.wishlistService.removeFromWishlist(product);
+   // this.wishlistService.removeFromWishlist(product);
 }
 
 // Remove from wishlist
+/*
 public removeItem(product: Product) {
  this.wishlistService.removeFromWishlist(product);
 }
+*/
 
 }

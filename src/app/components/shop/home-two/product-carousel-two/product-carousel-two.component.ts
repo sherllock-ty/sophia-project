@@ -63,6 +63,7 @@ export class ProductCarouselTwoComponent implements OnInit {
    }
 
    // Add to wishlist
+   /*
    public addToWishlist(product: Product) {
      this.wishlistService.addToWishlist(product);
   }
@@ -71,6 +72,7 @@ export class ProductCarouselTwoComponent implements OnInit {
    public addToCompare(product: Product) {
      this.productsService.addToCompare(product);
   }
+  */
 
 
  public openProductDialog(product){

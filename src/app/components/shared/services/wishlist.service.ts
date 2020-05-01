@@ -11,7 +11,7 @@ let products = JSON.parse(localStorage.getItem("wishlistItem")) || [];
   providedIn: 'root'
 })
 export class WishlistService {
-
+/*
   // wishlist array
   public wishlistProducts: BehaviorSubject<Product[]> = new BehaviorSubject([]);
   public observer   :  Subscriber<{}>;
@@ -59,4 +59,5 @@ export class WishlistService {
     products.splice(index, 1);
     localStorage.setItem("wishlistItem", JSON.stringify(products));
   }
+  */
 }
