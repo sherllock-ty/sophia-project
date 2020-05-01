@@ -16,7 +16,6 @@ export class MainCarouselComponent implements OnInit {
     el: '.swiper-pagination',
     clickable: true
   };
-
   constructor() { }
 
   ngOnInit() { }
