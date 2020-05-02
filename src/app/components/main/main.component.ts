@@ -281,7 +281,6 @@ export class MainComponent implements OnInit {
    //  this.flag = this.flags[0];
   }
 
-
   goTop(){
     document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
