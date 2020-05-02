@@ -1,5 +1,5 @@
   <mat-sidenav-container fullscreen>
-  <!--  <mat-sidenav [opened]="false" mode="over"  #start  class="sidenav">
+   <mat-sidenav [opened]="false" mode="over"  #start  class="sidenav">
         <button mat-icon-button color="warn" class="close" (click)="start.close()">
           <mat-icon color="warn">close</mat-icon>
         </button>
@@ -8,14 +8,39 @@
             <app-sidebar *ngFor="let item of navItems" [item]="item"></app-sidebar>
         </div>
     </mat-sidenav>
-    <mat-toolbar class="main-topbar" [ngClass]="{topbar_four: modeAffichage == 4 }">
+    <mat-toolbar style="
+      position: fixed;
+      top: 0px;
+      right: 0;
+      left: 0;
+      z-index: 999;"
+     class="main-topbar" [ngClass]="{topbar_four: modeAffichage == 4 }">
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" class="top-bar container" >
                 <span fxHide="false" fxHide.gt-sm   >
                     <button mat-icon-button (click)="start.toggle()">
                         <mat-icon>menu</mat-icon>
                     </button>
                  </span>
-              <div fxLayout="row" class="welcome-message">
+            <!-- Ajouter ici des trucs ...      -->
+        </mat-toolbar-row>
+
+      </mat-toolbar> 
+  <div style="padding-top: 55px;">
+  <app-header  *ngIf="(modeAffichage==1 || modeAffichage==3) || (modeAffichage != 2  && modeAffichage != 4) &&  (router.url.includes('pages') || router.url.includes('products') || router.url.includes('blog') || router.url.includes('product'))"></app-header>
+  <app-header-two *ngIf="modeAffichage == 2"></app-header-two>
+  <app-header-three *ngIf="modeAffichage == 4"></app-header-three>
+  <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
+
+  
+  <router-outlet (deactivate)="goTop()"></router-outlet>
+  
+
+  <app-footer *ngIf="modeAffichage != 5"></app-footer>
+  <app-footer-two *ngIf="modeAffichage == 5"></app-footer-two>
+</div>
+</mat-sidenav-container>
+
+          <!-- <div fxLayout="row" class="welcome-message">
                 <div class="widget-text">
                   <a mat-button [matMenuTriggerFor]="currencyMenu" #currencyMenuTrigger="matMenuTrigger">
                     {{currency}}<mat-icon class="mat-icon-sm caret cur-icon">arrow_drop_down</mat-icon>
@@ -42,8 +67,8 @@
                     </span>
                 </mat-menu>
                 </div>
-              </div>
-              <div class="widgets-left" fxLayout="row">
+              </div> -->
+              <!-- <div class="widgets-left" fxLayout="row">
 
                 <div class="widget-text">
                   <a fxShow="false" fxShow.gt-xs [routerLink]="['/pages/wishlist']" routerLinkActive="router-link-active" ><mat-icon class="mat-icon-lg mat-icon material-icons mr-10">favorite_border</mat-icon> WISHLIST</a>
@@ -54,28 +79,5 @@
                 <div class="widget-text">
                     <a fxShow="false" fxShow.gt-xs [routerLink]="['/pages/my-account']" routerLinkActive="router-link-active" ><mat-icon>person</mat-icon>My Account</a>
                   </div>
-              </div>
+              </div> -->
 
-
-
-        </mat-toolbar-row>
-
-      </mat-toolbar> -->
-
-  <app-header style="position: fixed;
-  right: 0;
-  left: 0;
-  z-index: 999;"
-  *ngIf="(modeAffichage==1 || modeAffichage==3) || (modeAffichage != 2  && modeAffichage != 4) &&  (router.url.includes('pages') || router.url.includes('products') || router.url.includes('blog') || router.url.includes('product'))"></app-header>
-  <app-header-two *ngIf="modeAffichage == 2"></app-header-two>
-  <app-header-three *ngIf="modeAffichage == 4"></app-header-three>
-  <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
-
-  <div style="padding-top: 160px;">
-  <router-outlet (deactivate)="goTop()"></router-outlet>
-  </div>
-
-  <app-footer *ngIf="modeAffichage != 5"></app-footer>
-  <app-footer-two *ngIf="modeAffichage == 5"></app-footer-two>
-
-</mat-sidenav-container>
