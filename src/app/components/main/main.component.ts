@@ -277,18 +277,20 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit() {
-    this.currency = this.currencies[0];
-    this.flag = this.flags[0];
+   //  this.currency = this.currencies[0];
+   //  this.flag = this.flags[0];
   }
+
 
   goTop(){
     document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
 
-  public changeCurrency(currency){
-    this.currency = currency;
-  }
-  public changeLang(flag){
-    this.flag = flag;
-  }
+//   public changeCurrency(currency){
+//     this.currency = currency;
+//   }
+//   public changeLang(flag){
+//     this.flag = flag;
+//   }
+
 }
