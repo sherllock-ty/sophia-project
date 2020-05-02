@@ -1,4 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
+
+import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -8,14 +9,15 @@ import { DemoComponent } from './components/demo/demo.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxImgZoomModule } from 'ngx-img-zoom';
 
-
 import { MainComponent } from './components/main/main.component';
-
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { ShopModule } from './components/shop/shop.module';
 import { SharedModule } from './components/shared/shared.module';
+import { GestureConfig } from '@angular/material';
+
+import 'hammerjs';
 
 
 @NgModule({
@@ -30,16 +32,19 @@ import { SharedModule } from './components/shared/shared.module';
   imports: [
     NgxSpinnerModule,
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     ShopModule,
     HttpClientModule,
-    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    NgxImgZoomModule
+    NgxImgZoomModule,
   ],
-  providers: [],
+  providers: [     {
+    provide: HAMMER_GESTURE_CONFIG,
+    useClass: GestureConfig
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

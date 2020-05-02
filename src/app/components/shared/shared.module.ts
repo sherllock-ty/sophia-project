@@ -41,6 +41,7 @@ import { CategoriesMenuComponent } from './categories-menu/categories-menu.compo
 import { CategoriesSectionComponent } from './categories-section/categories-section.component';
 import { FooterTwoComponent } from './footer-two/footer-two.component';
 import { ScrollTopDirective } from './directives/scroll-top.directive';
+import { HammerModule } from '@angular/platform-browser';
 
 
 
