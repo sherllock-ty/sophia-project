@@ -275,14 +275,14 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit() {
-    this.currency = this.currencies[0];
-    this.flag = this.flags[0];
+   //  this.currency = this.currencies[0];
+   //  this.flag = this.flags[0];
   }
 
-  public changeCurrency(currency){
-    this.currency = currency;
-  }
-  public changeLang(flag){
-    this.flag = flag;
-  }
+  // public changeCurrency(currency){
+  //   this.currency = currency;
+  // }
+  // public changeLang(flag){
+  //   this.flag = flag;
+  // }
 }
