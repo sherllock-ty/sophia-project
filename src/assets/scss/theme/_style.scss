@@ -523,14 +523,14 @@ line-height: 23px;
   max-width:100%;
   height:auto;
 }
-//  .lock-bar
-//  {
+ .lock-bar
+ {
   // position: fixed;
-  // top: 0;
-  // left: 0;
+  // top: 0px;
   // right: 0;
-  // z-index: 100;
-//  }
+  // left: 0;
+  // z-index: 999;
+ }
 
 .logo {
    padding: 25px 0;
