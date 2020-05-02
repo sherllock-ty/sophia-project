@@ -23,9 +23,6 @@ export class ProductCarouselComponent implements OnInit {
   ngOnInit() {
   }
 
-  goTop(){
-    document.querySelector('mat-sidenav-content').scrollTo(0,0);
-  }
 
   ngAfterViewInit(){
     this.config = {

@@ -1,7 +1,7 @@
 <mat-toolbar-row fxHide fxShow.gt-sm class="container" fxLayout="row"  fxLayout.xs="row" fxLayoutAlign="space-between center">
   <div class="main-menu" fxLayout="row" fxHide fxShow.gt-sm>
-      <a [routerLink]="['/home']" routerLinkActive="router-link-active"  mat-button class="mat-button">Acceuil</a>
-      <a [routerLink]="['/home/products/all']" routerLinkActive="router-link-active"  mat-button class="mat-button">Produits</a>
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active"  mat-button class="mat-button" appScrollTop>Acceuil</a>
+      <a [routerLink]="['/home/products/all']" routerLinkActive="router-link-active"  mat-button class="mat-button" appScrollTop>Produits</a>
       <a  mat-button [matMenuTriggerFor]="shop" class="mat-button" (click)="openMegaMenu()">Magasin<mat-icon class="caret">arrow_drop_down</mat-icon></a>
       <mat-menu #shop="matMenu" [overlapTrigger]="false" class="app-dropdown mega-menu">
           <div fxLayout="row wrap">
@@ -51,7 +51,7 @@
       </mat-menu>
       <!-- <a  mat-button [matMenuTriggerFor]="pages" class="mat-button">Pages<mat-icon class="caret">arrow_drop_down</mat-icon></a>
       <mat-menu #pages="matMenu" [overlapTrigger]="false" class="app-dropdown"> -->
-        <a [routerLink]="['/pages/about']" routerLinkActive="router-link-active"  mat-button class="mat-button">à propos</a>
+        <a [routerLink]="['/pages/about']" routerLinkActive="router-link-active"  mat-button class="mat-button" appScrollTop>à propos</a>
         <!-- <a [routerLink]="['/pages/about']" mat-menu-item>A PROPOS</a> -->
         <!-- <a mat-menu-item [routerLink]="['/pages/faq']" >FAQ</a>
         <a mat-menu-item [routerLink]="['/pages/contact']">Contact</a>
@@ -62,7 +62,7 @@
         <a mat-menu-item [routerLink]="['/pages/my-account']">My Account</a>
         <a mat-menu-item [routerLink]="['/pages/error']">404</a>
     </mat-menu> -->
-      <a [routerLink]="['/pages/contact']" routerLinkActive="router-link-active"   mat-button class="mat-button">Contact</a>
+      <a [routerLink]="['/pages/contact']" routerLinkActive="router-link-active"   mat-button class="mat-button" appScrollTop>Contact</a>
     </div>
     <!-- <app-shopping-widgets *ngIf="url == '/home/one'" [shoppingCartItems]="shoppingCartItems"></app-shopping-widgets> -->
     <!-- <div class="main-menu-wrapper" fxLayout="row" fxLayoutAlign="space-between center" >
