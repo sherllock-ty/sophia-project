@@ -73,7 +73,7 @@
   <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
 
   <div style="padding-top: 160px;">
-  <router-outlet (activate)="goTop()"></router-outlet>
+  <router-outlet (deactivate)="goTop()"></router-outlet>
   </div>
 
   <app-footer *ngIf="modeAffichage != 5"></app-footer>

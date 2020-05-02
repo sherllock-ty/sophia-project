@@ -40,6 +40,7 @@ import { HeaderFourComponent } from './header-four/header-four.component';
 import { CategoriesMenuComponent } from './categories-menu/categories-menu.component';
 import { CategoriesSectionComponent } from './categories-section/categories-section.component';
 import { FooterTwoComponent } from './footer-two/footer-two.component';
+import { ScrollTopDirective } from './directives/scroll-top.directive';
 
 
 
@@ -60,7 +61,8 @@ import { FooterTwoComponent } from './footer-two/footer-two.component';
     HeaderFourComponent,
     CategoriesMenuComponent,
     CategoriesSectionComponent,
-    FooterTwoComponent
+    FooterTwoComponent,
+    ScrollTopDirective
   ],
   imports: [
     CommonModule,
