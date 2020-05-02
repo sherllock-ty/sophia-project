@@ -27,10 +27,7 @@ export class ProductCarouselThreeComponent implements OnInit {
   ngOnInit() {
   }
 
-  goTop(){
-    // methode temporaire,la vrai solution est dans product-details .ts
-    document.querySelector('mat-sidenav-content').scrollTo(0,0);
-  }
+
   ngAfterViewInit(){
     this.config = {
       observer: true,

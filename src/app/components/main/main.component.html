@@ -62,7 +62,7 @@
         </mat-toolbar-row>
 
       </mat-toolbar> -->
-  
+
   <app-header style="position: fixed;
   right: 0;
   left: 0;
@@ -73,7 +73,7 @@
   <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
 
   <div style="padding-top: 160px;">
-  <router-outlet></router-outlet>
+  <router-outlet (activate)="goTop()"></router-outlet>
   </div>
 
   <app-footer *ngIf="modeAffichage != 5"></app-footer>

@@ -39,6 +39,8 @@ export class MainComponent implements OnInit {
 
   public url : any;
 
+
+
   navItems: SidenavMenu[] = [
     {
       displayName: 'Home',
@@ -277,6 +279,10 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.currency = this.currencies[0];
     this.flag = this.flags[0];
+  }
+
+  goTop(){
+    document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
 
   public changeCurrency(currency){
