@@ -281,15 +281,15 @@ export class MainComponent implements OnInit {
    //  this.flag = this.flags[0];
   }
 
-  // scroll to top when rooting, apply srollTop directive if not rooting
   goTop(){
     document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
 
-  public changeCurrency(currency){
-    this.currency = currency;
-  }
-  public changeLang(flag){
-    this.flag = flag;
-  }
+//   public changeCurrency(currency){
+//     this.currency = currency;
+//   }
+//   public changeLang(flag){
+//     this.flag = flag;
+//   }
+
 }
