@@ -6,7 +6,8 @@ import { Directive,HostListener} from '@angular/core';
 export class ScrollTopDirective {
 
   @HostListener('click') goTop(){
-    document.querySelector('mat-sidenav-content').scrollTo(0,0);
+   document.querySelector('mat-sidenav-content').scroll({ top: 0, behavior: 'smooth' });
+
   }
 
   constructor() { }

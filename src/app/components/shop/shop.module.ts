@@ -30,8 +30,6 @@ import { PopularProductsComponent } from './widgets/popular-products/popular-pro
 import { HomeFourComponent } from './home-four/home-four.component';
 import { ProductZoomComponent } from './products/product-details/product-zoom/product-zoom.component';
 import { HomeFiveComponent } from './home-five/home-five.component';
-import { HammerModule } from '@angular/platform-browser';
-
 
 @NgModule({
   declarations: [

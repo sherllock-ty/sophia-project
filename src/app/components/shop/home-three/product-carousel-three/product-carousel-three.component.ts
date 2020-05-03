@@ -89,4 +89,9 @@ public openProductDialog(product){
   });
 }
 
+goTop(){
+     document.querySelector('mat-sidenav-content').scroll({ top: 0, behavior: 'smooth' });
+
+}
+
 }

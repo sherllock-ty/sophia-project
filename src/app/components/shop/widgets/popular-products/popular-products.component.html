@@ -18,7 +18,7 @@
                   <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
                   <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
                </div>
-               <p class="price" *ngIf="!productsService?.catalogMode">{{product.price | currency:productsService?.currency:'symbol'}}</p>
+               <p class="price" *ngIf="!productsService?.catalogMode">{{product.price | currency:productsService?.currency:''}} D.A</p>
              </div>
           </mat-list-item>
       </mat-list>

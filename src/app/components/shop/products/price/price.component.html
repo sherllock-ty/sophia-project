@@ -1,7 +1,7 @@
 <div class="price-slider">
   <div fxLayout="row" fxLayoutAlign="space-between center" class="text-muted">
-      <span>From: <b>${{priceFrom}}</b></span>
-      <span>To: <b>${{priceTo}}</b></span>
+      <span>From: <b>{{priceFrom}} D.A</b></span>
+      <span>To: <b>{{priceTo}} D.A</b></span>
   </div>
   <div style="padding-top: 20px;" fxLayout="row" fxLayoutAlign="space-between center" class="filter-price">
       <mat-slider (change)="priceFilter()" color="primary" max="2000" min="1"  thumbLabel [(ngModel)]="priceFrom"></mat-slider>

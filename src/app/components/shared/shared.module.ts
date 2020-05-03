@@ -64,6 +64,7 @@ import { HammerModule } from '@angular/platform-browser';
     CategoriesSectionComponent,
     FooterTwoComponent,
     ScrollTopDirective
+
   ],
   imports: [
     CommonModule,
@@ -124,7 +125,8 @@ import { HammerModule } from '@angular/platform-browser';
     BannerPromotionComponent,
     CategoriesMenuComponent,
     CategoriesSectionComponent,
-    FooterTwoComponent
+    FooterTwoComponent,
+    ScrollTopDirective
 
   ],
   providers: [

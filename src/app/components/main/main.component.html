@@ -14,7 +14,7 @@
                     <button mat-icon-button (click)="start.toggle()">
                         <mat-icon>menu</mat-icon>
                     </button>
-                </span>   
+                </span>
                 <span fxHide fxShow.gt-sm>
                       <button mat-icon-button (click)="goTop()">
                           <mat-icon class="color-icon">keyboard_capslock</mat-icon>
@@ -22,7 +22,7 @@
                 </span>
                  <div fxHide fxShow.gt-sm style="margin: auto;" class="info-message-icon" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="space-between center">
                   <div class="icon" fxLayout="row" >
-                    
+
                       <mat-icon class="mat-icon-lg mat-icon material-icons color-icon" >call</mat-icon>
                   </div>
                     <div class="info-text">
@@ -37,9 +37,9 @@
                       <p style="color: azure; font-size: 10px;">VOUS VOULEZ PASSER UNE COMMANDE ? : 0770000000</p>
                     </div>
                 </div>
-               
-        </mat-toolbar-row>  
-      </mat-toolbar> 
+
+        </mat-toolbar-row>
+      </mat-toolbar>
   <div style="padding-top: 55px;">
   <app-header  *ngIf="(modeAffichage==1 || modeAffichage==3) || (modeAffichage != 2  && modeAffichage != 4) &&  (router.url.includes('pages') || router.url.includes('products') || router.url.includes('blog') || router.url.includes('product'))"></app-header>
   <app-header-two *ngIf="modeAffichage == 2"></app-header-two>

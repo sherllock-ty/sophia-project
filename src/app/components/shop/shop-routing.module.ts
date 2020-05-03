@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-// import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { ProductLeftSidebarComponent } from './products/product-left-sidebar/product-left-sidebar.component';
 import { HomeTwoComponent } from './home-two/home-two.component';
@@ -18,9 +18,9 @@ const routes: Routes = [
   },
   // { path: '', component: HomeComponent },
 
-  // Pour activer un mode d'affiche, renommer le path à '' et changer mode affichage dans main.ts 
+  // Pour activer un mode d'affiche, renommer le path à '' et changer mode affichage dans main.ts
 
-  { path: '', component: HomeTwoComponent },
+   { path: '', component: HomeTwoComponent },
   // { path: '', component: HomeThreeComponent },
   // { path: '', component: HomeFourComponent },
   // { path: '', component: HomeFiveComponent },
