@@ -8,13 +8,7 @@
             <app-sidebar *ngFor="let item of navItems" [item]="item"></app-sidebar>
         </div>
     </mat-sidenav>
-    <mat-toolbar style="
-      position: fixed;
-      top: 0px;
-      right: 0;
-      left: 0;
-      z-index: 999;"
-     class="main-topbar" [ngClass]="{topbar_four: modeAffichage == 4 }">
+    <mat-toolbar  class="main-topbar lock-bar" [ngClass]="{topbar_four: modeAffichage == 4 }">
         <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" class="top-bar container" >
                 <span fxHide="false" fxHide.gt-sm>
                     <button mat-icon-button (click)="start.toggle()">
@@ -23,7 +17,8 @@
                  </span>
                  <div fxHide fxShow.gt-sm style="margin: auto;" class="info-message-icon" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="space-between center">
                   <div class="icon" fxLayout="row" >
-                      <mat-icon class="mat-icon-lg mat-icon material-icons" style="color: greenyellow;">call</mat-icon>
+                    
+                      <mat-icon class="mat-icon-lg mat-icon material-icons color-icon" >call</mat-icon>
                   </div>
                     <div class="info-text">
                       <h1 style="color: azure;">VOUS VOULEZ PASSER UNE COMMANDE ? : 0770000000</h1>
@@ -31,7 +26,7 @@
                 </div>
                  <div style="margin: auto;" fxHide.gt-sm  class="info-message-icon" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-between center">
                   <div class="icon" fxLayout="row" >
-                      <mat-icon class="mat-icon-lg mat-icon material-icons" style="color: greenyellow;">call</mat-icon>
+                      <mat-icon class="mat-icon-lg mat-icon material-icons color-icon">call</mat-icon>
                   </div>
                     <div class="info-text">
                       <p style="color: azure; font-size: 10px;">VOUS VOULEZ PASSER UNE COMMANDE ? : 0770000000</p>
