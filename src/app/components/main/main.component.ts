@@ -3,9 +3,10 @@ import {Product} from "../../modals/product.model";
 import {CartItem} from "../../modals/cart-item";
 import {ProductService} from "../shared/services/product.service";
 import {CartService} from "../shared/services/cart.service";
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationError } from '@angular/router';
 import { SidebarMenuService } from '../shared/sidebar/sidebar-menu.service';
 import { SidenavMenu } from '../shared/sidebar/sidebar-menu.model';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-main',
@@ -14,10 +15,11 @@ import { SidenavMenu } from '../shared/sidebar/sidebar-menu.model';
 })
 export class MainComponent implements OnInit {
 
+  showLoading = true;
   public modeAffichage = 2;
   public sidenavMenuItems:Array<any>;
 
-  public currencies = ['USD', 'EUR'];
+  // public currencies = ['DZA'];
   public currency:any;
   public flags = [
     { name:'English', image: 'assets/images/flags/gb.svg' },
@@ -262,10 +264,16 @@ export class MainComponent implements OnInit {
     }
   ];
 
-  constructor(public router: Router, private cartService: CartService, public sidenavMenuService:SidebarMenuService) {
+  constructor(private spinner: NgxSpinnerService, public router: Router,
+     private cartService: CartService, public sidenavMenuService:SidebarMenuService) {
     this.cartService.getItems().subscribe(shoppingCartItems => this.shoppingCartItems = shoppingCartItems);
     this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
+      if (event instanceof NavigationStart)
+       {
+        this.spinner.show();
+       }
+      if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
+        this.spinner.hide();
         this.url = event.url;
       }
     } )
@@ -277,19 +285,19 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit() {
-    this.currency = this.currencies[0];
-    this.flag = this.flags[0];
+    // this.currency = this.currencies[0];
+    // this.flag = this.flags[0];
   }
 
   goTop(){
     document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
 
-  public changeCurrency(currency){
-    this.currency = currency;
-  }
-  public changeLang(flag){
-    this.flag = flag;
-  }
+  // public changeCurrency(currency){
+  //   this.currency = currency;
+  // }
+  // public changeLang(flag){
+  //   this.flag = flag;
+  // }
 
 }
