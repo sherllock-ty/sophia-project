@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
   public modeAffichage = 2;
   public sidenavMenuItems:Array<any>;
 
-  public currencies = ['USD', 'EUR'];
+  // public currencies = ['DZA'];
   public currency:any;
   public flags = [
     { name:'English', image: 'assets/images/flags/gb.svg' },
@@ -277,19 +277,19 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit() {
-    this.currency = this.currencies[0];
-    this.flag = this.flags[0];
+    // this.currency = this.currencies[0];
+    // this.flag = this.flags[0];
   }
 
   goTop(){
     document.querySelector('mat-sidenav-content').scrollTo(0,0);
   }
 
-  public changeCurrency(currency){
-    this.currency = currency;
-  }
-  public changeLang(flag){
-    this.flag = flag;
-  }
+  // public changeCurrency(currency){
+  //   this.currency = currency;
+  // }
+  // public changeLang(flag){
+  //   this.flag = flag;
+  // }
 
 }
