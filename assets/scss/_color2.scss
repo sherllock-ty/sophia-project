@@ -1,0 +1,21 @@
+@import 'theme/variables';
+$theme-main: rgb(248, 123, 6);
+@import 'theme/style';
+@import 'theme/responsive';
+
+
+// My classes : 
+.color-icon{
+    color : $theme-main;
+}
+.lock-bar{
+    position: fixed;
+    top: 0px;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+.logo-fine{
+    max-width:100%;
+    height:auto;
+}
