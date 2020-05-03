@@ -15,7 +15,13 @@
     <mat-menu class="spCard-main"  #menu="matMenu">
       <div class="spCard-dropdown">
         <div class="card-list-title" fxLayout="row" fxLayoutAlign="space-between start">
-           <a [routerLink]="['/pages/cart']" routerLinkActive="router-link-active" ><p>CHECK CARD</p></a>
+
+          <div class="icon"  fxLayout="row" fxLayoutGap="5px">      
+            <mat-icon style="color : green;">check_circle</mat-icon>
+            <a [routerLink]="['/pages/cart']" routerLinkActive="router-link-active" >
+              <p style="padding-top:3px; font-size: 15px; font-weight: bold;">Valider le panier</p></a>      
+           </div>
+
             <p>{{shoppingCartItems.length}} ITEM</p>
         </div>
             <mat-divider></mat-divider>

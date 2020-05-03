@@ -1,5 +1,5 @@
 @import 'theme/variables';
-$theme-main: #E2EE33;
+$theme-main: rgb(248, 123, 6);
 @import 'theme/style';
 @import 'theme/responsive';
 
@@ -8,8 +8,7 @@ $theme-main: #E2EE33;
 .color-icon{
     color : $theme-main;
 }
-.lock-bar
-{
+.lock-bar{
     position: fixed;
     top: 0px;
     right: 0;
@@ -19,4 +18,4 @@ $theme-main: #E2EE33;
 .logo-fine{
     max-width:100%;
     height:auto;
-  }
+}
