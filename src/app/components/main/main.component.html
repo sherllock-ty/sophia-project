@@ -14,7 +14,12 @@
                     <button mat-icon-button (click)="start.toggle()">
                         <mat-icon>menu</mat-icon>
                     </button>
-                 </span>
+                </span>   
+                <span fxHide fxShow.gt-sm>
+                      <button mat-icon-button (click)="goTop()">
+                          <mat-icon class="color-icon">keyboard_capslock</mat-icon>
+                      </button>
+                </span>
                  <div fxHide fxShow.gt-sm style="margin: auto;" class="info-message-icon" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="space-between center">
                   <div class="icon" fxLayout="row" >
                     
@@ -41,9 +46,9 @@
   <app-header-three *ngIf="modeAffichage == 4"></app-header-three>
   <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
 
-  
+  <ngx-spinner></ngx-spinner>
   <router-outlet (deactivate)="goTop()"></router-outlet>
-  
+
 
   <app-footer *ngIf="modeAffichage != 5"></app-footer>
   <app-footer-two *ngIf="modeAffichage == 5"></app-footer-two>
