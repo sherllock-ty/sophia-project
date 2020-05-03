@@ -15,7 +15,6 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class MainComponent implements OnInit {
 
-  showLoading = true;
   public modeAffichage = 2;
   public sidenavMenuItems:Array<any>;
 

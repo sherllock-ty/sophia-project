@@ -32,7 +32,8 @@ export class ProductDetailsComponent implements OnInit {
   index: number;
   bigProductImageIndex = 0;
 
-  constructor(private route: ActivatedRoute, public productsService: ProductService, public dialog: MatDialog, private router: Router, private cartService: CartService) {
+  constructor(private route: ActivatedRoute, public productsService: ProductService,
+     public dialog: MatDialog, private router: Router, private cartService: CartService) {
     this.route.params.subscribe(params => {
       const id = +params['id'];
       this.productsService.getProduct(id).subscribe(product => this.product = product)
