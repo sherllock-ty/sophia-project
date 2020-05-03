@@ -290,7 +290,9 @@ export class MainComponent implements OnInit {
   }
 
   goTop(){
-    document.querySelector('mat-sidenav-content').scrollTo(0,0);
+    // setTimeout(() => {
+    document.querySelector('mat-sidenav-content').scroll({top: 0, behavior: 'smooth'});
+    // },1000);
   }
 
   // public changeCurrency(currency){

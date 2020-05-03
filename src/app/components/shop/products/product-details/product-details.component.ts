@@ -48,7 +48,7 @@ export class ProductDetailsComponent implements OnInit {
 
 
   ngAfterViewInit() {
-    document.querySelector('mat-sidenav-content').scrollTop = 0;
+    // document.querySelector('mat-sidenav-content').scroll({top: 0, behavior: 'smooth'});
     this.config = {
       observer: true,
       slidesPerView: 3,

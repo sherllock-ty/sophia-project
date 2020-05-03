@@ -25,6 +25,8 @@ export class ProductCarouselTwoComponent implements OnInit {
    ngOnInit() {
      console.log(this.product);
    }
+
+
    ngAfterViewInit(){
      this.config = {
        observer: true,

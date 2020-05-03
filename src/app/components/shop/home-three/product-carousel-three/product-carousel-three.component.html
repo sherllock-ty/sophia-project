@@ -3,14 +3,14 @@
         <div *ngFor="let product of product" class="swiper-slide">
             <mat-card fxLayout="column">
                 <div class="product-img">
-                    <a class="product-link" [routerLink]="['/home/product', product.id]">
+                    <a class="product-link" [routerLink]="['/home/product', product.id]" appScrollTop>
                       <img [src]="product.pictures[0].big" alt="">
                    </a>
                 </div>
                  <div class="product-info-wrapper">
                     <span class="category">{{product.category}}</span>
                     <div class="title-wrap">
-                     <a class="no-violet" [routerLink]="['/home/product', product.id]">
+                     <a class="no-violet" [routerLink]="['/home/product', product.id]" appScrollTop>
                        <h4>{{product.name}}</h4>
                      </a>
                      </div>
@@ -22,7 +22,7 @@
                        <mat-icon class="mat-icon-xs mat-icon material-icons ng-star-inserted">star_rate</mat-icon>
                     </div>
                     <div class="price-wrap" fxLayout="row" fxLayoutAlign="space-between center">
-                     <p>${{product.price | number : '1.2-2'}}</p>
+                     <p>{{product.price | number : '1.2-2'}} D.A</p>
                     <a (click)="addToCart(product)"><mat-icon class="mat-icon-lg mat-icon material-icons">shopping_cart</mat-icon></a>
                     </div>
                     <div class="icons" fxLayout="column">

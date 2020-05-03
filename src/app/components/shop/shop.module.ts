@@ -31,8 +31,6 @@ import { HomeFourComponent } from './home-four/home-four.component';
 import { ProductZoomComponent } from './products/product-details/product-zoom/product-zoom.component';
 import { HomeFiveComponent } from './home-five/home-five.component';
 
-
-
 @NgModule({
   declarations: [
     HomeComponent,
