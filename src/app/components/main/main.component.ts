@@ -44,33 +44,17 @@ export class MainComponent implements OnInit {
 
   navItems: SidenavMenu[] = [
     {
-      displayName: 'Home',
+      displayName: 'Acceuil',
       iconName: 'recent_actors',
-      children: [
-        {
-          displayName: 'Home-1',
-          iconName: 'group',
-          route: '/home/one'
-        },
-        {
-          displayName: 'Home-2',
-          iconName: 'speaker_notes',
-          route: '/home/two',
-        },
-        {
-          displayName: 'Home-3',
-          iconName: 'feedback',
-          route: '/home/three'
-        }
-      ]
+      route: '/home'
     },
     {
-      displayName: 'Products',
+      displayName: 'Produits',
           iconName: 'feedback',
           route: '/home/products/all'
     },
     {
-      displayName: 'Shop',
+      displayName: 'Catégories',
       iconName: 'movie_filter',
       children: [
         {
@@ -185,81 +169,14 @@ export class MainComponent implements OnInit {
       ]
     },
     {
-      displayName: 'Blog',
-      iconName: 'report_problem',
-      children: [
-        {
-          displayName: 'Blog List',
-          iconName: 'group',
-          route: '/blog/blog-list'
-        },
-        {
-          displayName: 'Blog Columns',
-          iconName: 'speaker_notes',
-          route: '/blog/blog-column',
-        },
-        {
-          displayName: 'Blog Details',
-          iconName: 'feedback',
-          route: '/blog/blog-details'
-        }
-      ]
-    },
-    {
-      displayName: 'Pages',
-      iconName: 'report_problem',
-      children: [
-        {
-          displayName: 'About Us',
-          iconName: 'group',
-          route: '/pages/about'
-        },
-        {
-          displayName: 'FAQ',
-          iconName: 'speaker_notes',
-          route: '/pages/faq',
-        },
-        {
-          displayName: 'Contact',
-          iconName: 'feedback',
-          route: '/pages/contact'
-        },
-        {
-          displayName: 'Wishlist',
-          iconName: 'group',
-          route: '/pages/wishlist'
-        },
-        {
-          displayName: 'Compare',
-          iconName: 'speaker_notes',
-          route: '/pages/compare',
-        },
-        {
-          displayName: 'Checkout',
-          iconName: 'feedback',
-          route: '/pages/checkout'
-        },
-        {
-          displayName: 'Cart',
-          iconName: 'group',
-          route: '/pages/cart'
-        },
-        {
-          displayName: 'My Account',
-          iconName: 'speaker_notes',
-          route: '/pages/my-account',
-        },
-        {
-          displayName: '404',
-          iconName: 'feedback',
-          route: '/pages/error'
-        }
-      ]
+      displayName: 'A propos',
+      iconName: 'group',
+      route: '/pages/about'
     },
     {
       displayName: 'Contact',
-          iconName: 'feedback',
-          route: '/pages/contact'
+      iconName: 'feedback',
+      route: '/pages/contact'
     }
   ];
 
@@ -272,7 +189,7 @@ export class MainComponent implements OnInit {
         this.spinner.show();
        }
       if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        this.spinner.hide();
+        this.spinner.hide();   
         this.url = event.url;
       }
     } )
@@ -284,6 +201,7 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit() {
+ 
     // this.currency = this.currencies[0];
     // this.flag = this.flags[0];
   }

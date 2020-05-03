@@ -4806,8 +4806,9 @@ font-weight: 400;
   }
 }
 .sidenav  {
+  background :$dark-font;
   .divider {
-margin: 10px 0;
+      margin: 10px 0;
   }
 
 }

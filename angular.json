@@ -107,6 +107,13 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://sherllock-ty.github.io/sophia-project/",
+		    "repo": "https://github.com/sherllock-ty/sophia-project.git"
+		  }
         }
       }
     },

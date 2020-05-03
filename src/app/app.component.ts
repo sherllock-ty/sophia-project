@@ -9,7 +9,8 @@ export class AppComponent {
 
   title = 'ecommerce-sophia-new';
 
-  constructor() {}
+  constructor() {
+  }
 
 
   ngOnInit() {
