@@ -16,6 +16,7 @@ import { BlogModule } from '../blog/blog.module';
 import { ErrorPageComponent } from './error-page/error-page.component';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -34,7 +35,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     MyAccountComponent,
     FaqComponent,
     AboutUsComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
 
   ]
 })

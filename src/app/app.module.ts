@@ -1,3 +1,4 @@
+import { PagesModule } from './components/pages/pages.module';
 
 import { BrowserModule, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,14 +20,11 @@ import { GestureConfig } from '@angular/material';
 
 import 'hammerjs';
 
-
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    MainComponent
-
-
+    MainComponent,
 
   ],
   imports: [
@@ -40,6 +38,7 @@ import 'hammerjs';
     ReactiveFormsModule,
     AppRoutingModule,
     NgxImgZoomModule,
+    PagesModule
   ],
   providers: [     {
     provide: HAMMER_GESTURE_CONFIG,

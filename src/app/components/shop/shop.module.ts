@@ -30,6 +30,7 @@ import { PopularProductsComponent } from './widgets/popular-products/popular-pro
 import { HomeFourComponent } from './home-four/home-four.component';
 import { ProductZoomComponent } from './products/product-details/product-zoom/product-zoom.component';
 import { HomeFiveComponent } from './home-five/home-five.component';
+// import { FormulaireComponent } from '../formulaire/formulaire.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,8 @@ import { HomeFiveComponent } from './home-five/home-five.component';
     HomeFourComponent,
     ProductZoomComponent,
     HomeFiveComponent,
+    // FormulaireComponent
+ 
   ],
   imports: [
     CommonModule,

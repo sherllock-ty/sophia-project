@@ -1,0 +1,86 @@
+
+    <h1 id='text-color' class="color-icon" style="font-size: 30px; text-align: center;"> Formulaire de commande </h1>
+
+<form fxLayout="row wrap" fxLayoutGap="2%">
+    <div  fxFlex="100" fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+         <mat-form-field class="w-100">
+            <input matInput placeholder="Nom" #nom="ngModel" ngModel name="nom" required>
+            <mat-error *ngIf="nom.invalid">Nom obligatoire</mat-error>
+          </mat-form-field>
+    </div>
+    <div fxFlex="100"  fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+            <input matInput placeholder="Prénom" #prenom="ngModel" ngModel name="prenom" required>
+            <mat-error *ngIf="prenom.invalid">Prénom obligatoire</mat-error>
+          </mat-form-field>
+    </div>
+      
+    <div  fxFlex="100" fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+           <input matInput placeholder="Numéro de téléphone" #num1="ngModel" ngModel name="num1" required>
+           <mat-error *ngIf="num1.invalid">Numéro de téléphone obligatoire</mat-error>
+         </mat-form-field>
+   </div>
+   <div fxFlex="100"  fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+       <mat-form-field class="w-100">
+           <input matInput placeholder="Numéro de téléphone 2" #num2="ngModel" ngModel name="num2">    
+         </mat-form-field>
+   </div>
+
+    <div  fxFlex="100" fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+         <mat-select  placeholder="Wilaya" #wilaya="ngModel" ngModel name="wilaya" required></mat-select>
+         <mat-option>default</mat-option>
+         <mat-error *ngIf="wilaya.invalid">Wilaya obligatoire</mat-error> 
+         </mat-form-field>   
+    </div>
+
+    <div fxFlex="100"  fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+            <mat-select  placeholder="Commune" #commune="ngModel" ngModel name="commune" required></mat-select>
+            <mat-option>default</mat-option>
+            <mat-error *ngIf="commune.invalid">Commune obligatoire</mat-error> 
+        </mat-form-field> 
+
+    </div>
+
+    <div fxFlex="96" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+         <mat-form-field class="w-100">
+            <input matInput placeholder="Adresse" #Adresse="ngModel" ngModel name="Adresse" required>    
+            <mat-error *ngIf="Adresse.invalid">Adresse obligatoire</mat-error>
+          </mat-form-field>
+    </div>
+
+    <div fxFlex="100"  fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+            <mat-select  placeholder="Taille" #taille="ngModel" ngModel name="taille" required></mat-select>
+            <mat-option>default</mat-option>
+            <mat-error *ngIf="taille.invalid">Taille obligatoire</mat-error> 
+        </mat-form-field> 
+    </div>
+    
+    <div fxFlex="100"  fxFlex.gt-md="47" fxFlex.md="47" class="mt-20 pr-5" ngClass.sm="mt-10" ngClass.xs="mt-10">
+        <mat-form-field class="w-100">
+            <mat-select  placeholder="Quantité" #qte="ngModel" ngModel name="qte" required></mat-select>
+            <mat-option>default</mat-option>
+            <mat-error *ngIf="qte.invalid">Quantité obligatoire</mat-error> 
+        </mat-form-field>
+    </div>
+
+
+    <div  fxFlex="100" fxFlex.gt-sm="100"  fxLayoutAlign="center center">
+        <p style="font-weight: bold;"> Prix:  XXXX DZA</p>
+    </div>
+        <div  fxFlex="100" fxFlex.gt-sm="100"  fxLayoutAlign="center center">
+        <p style="font-weight: bold;"> Livraison:  XXXX DZA</p>
+    </div>
+        <div  fxFlex="100" fxFlex.gt-sm="100"  fxLayoutAlign="center center">
+        <p style="font-weight: bold; color: green;"> Total:  XXXX DZA</p>
+    </div>
+    
+
+     <div style="padding-top: 30px; padding-right: 15px;" class="button-wrap" fxFlex="100" fxFlex.gt-sm="100"  fxLayoutAlign="center center" class="px-1" ngClass.sm="mt-1" ngClass.xs="mt-1">
+         <button class="btn-project" mat-raised-button color="accent" type="submit">Commander</button>
+    </div>
+
+</form>
