@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
@@ -42,7 +41,7 @@ import { CategoriesSectionComponent } from './categories-section/categories-sect
 import { FooterTwoComponent } from './footer-two/footer-two.component';
 import { ScrollTopDirective } from './directives/scroll-top.directive';
 import { HammerModule } from '@angular/platform-browser';
-
+import { FormulaireComponent } from '../formulaire/formulaire.component';
 
 
 @NgModule({
@@ -63,7 +62,8 @@ import { HammerModule } from '@angular/platform-browser';
     CategoriesMenuComponent,
     CategoriesSectionComponent,
     FooterTwoComponent,
-    ScrollTopDirective
+    ScrollTopDirective,
+    FormulaireComponent
 
   ],
   imports: [
@@ -88,6 +88,8 @@ import { HammerModule } from '@angular/platform-browser';
     MatDividerModule,
     MatCardModule,
     FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     CommonModule,
@@ -126,7 +128,8 @@ import { HammerModule } from '@angular/platform-browser';
     CategoriesMenuComponent,
     CategoriesSectionComponent,
     FooterTwoComponent,
-    ScrollTopDirective
+    ScrollTopDirective,
+    FormulaireComponent
 
   ],
   providers: [
