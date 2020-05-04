@@ -112,10 +112,11 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "https://sherllock-ty.github.io/sophia-project/",
-            "repo": "https://github.com/sherllock-ty/sophia-project.git",
-            "name": "Sherllock-ty",
-            "email": "has.rahmoun@gmail.com"
-      }
+
+
+		    "repo": "https://github.com/sherllock-ty/sophia-project.git"
+		  }
+
         }
       }
     },

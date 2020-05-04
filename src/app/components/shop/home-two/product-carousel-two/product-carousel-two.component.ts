@@ -19,7 +19,8 @@ export class ProductCarouselTwoComponent implements OnInit {
   @Input('product') product: Array<Product> = [];
   public config: SwiperConfigInterface = {};
 
-   constructor(private cartService: CartService, private productsService: ProductService, private wishlistService: WishlistService, private dialog: MatDialog, private router: Router) { }
+   constructor(private cartService: CartService, private productsService: ProductService,
+     private wishlistService: WishlistService, private dialog: MatDialog, private router: Router) { }
   //  @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
 
    ngOnInit() {

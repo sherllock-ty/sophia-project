@@ -9,14 +9,12 @@ export class AppComponent {
 
   title = 'ecommerce-sophia-new';
 
-  constructor() {}
+  constructor() {
+  }
 
 
   ngOnInit() {
     window.scroll(0,0);
   }
-
-
-
 
 }
