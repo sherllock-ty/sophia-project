@@ -134,6 +134,8 @@ THE SOFTWARE.
 
 @angular/material/radio
 
+@angular/material/select
+
 @angular/material/sidenav
 
 @angular/material/slider
