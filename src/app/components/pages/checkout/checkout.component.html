@@ -94,7 +94,7 @@
                  </ul>
                 <ul class="total-amount">
                   <li>
-                    Subtotal <span class="amount">{{ getTotal() | async | currency:productService?.currency:'symbol'}}</span>
+                    Subtotal <span class="amount">{{ getTotal() | async | currency:productService?.currency:''}} D.A</span>
                   </li>
                   <li *ngIf='buyProducts.length'>
                     Shipping
