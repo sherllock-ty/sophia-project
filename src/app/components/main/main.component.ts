@@ -15,7 +15,6 @@ import { FacebookService, InitParams } from 'ngx-facebook';
 })
 export class MainComponent implements OnInit {
 
-  public pageID = 710021679027649;
   public modeAffichage = 2;
   public sidenavMenuItems:Array<any>;
 
@@ -198,13 +197,14 @@ export class MainComponent implements OnInit {
     } )
     const initParams: InitParams = { xfbml:true, version:'v3.2'};
     this.facebookService.init(initParams);
+    
   }
 
   ngAfterViewInit() {
   }
 
 
-  ngOnInit(){  
+  ngOnInit(){    
   }
 
   goTop(){
