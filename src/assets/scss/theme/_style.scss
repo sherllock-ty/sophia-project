@@ -1209,13 +1209,17 @@ line-height: 23px;
     .category-contant {
       ul {
         li {
-          display: block;
+          display: flex;
           a {
-            padding-top: 13px;
+    padding-top: 13px;
     padding-bottom: 13px !important;
     border-top: 1px solid $grey8;
-    margin: 0 10px -1px;
+    margin-left: 10px;
           }
+    mat-icon {
+          margin-left: 5px;
+          padding-top: 11px;
+              }
           .no-brd {
             border-top: none;
           }
