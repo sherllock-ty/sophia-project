@@ -9,7 +9,7 @@
         </div>
     </mat-sidenav>
     <mat-toolbar  class="main-topbar lock-bar" [ngClass]="{topbar_four: modeAffichage == 4 }">
-        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center" class="top-bar container" >
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center"  class="top-bar container" >
                 <span fxHide="false" fxHide.gt-sm>
                     <button mat-icon-button (click)="start.toggle()">
                         <mat-icon>menu</mat-icon>
@@ -40,7 +40,7 @@
 
         </mat-toolbar-row>
       </mat-toolbar>
-  <div style="padding-top: 55px;">
+  <!-- <div style="padding-top: 55px;"> -->
   <app-header  *ngIf="(modeAffichage==1 || modeAffichage==3) || (modeAffichage != 2  && modeAffichage != 4) &&  (router.url.includes('pages') || router.url.includes('products') || router.url.includes('blog') || router.url.includes('product'))"></app-header>
   <app-header-two *ngIf="modeAffichage == 2"></app-header-two>
   <app-header-three *ngIf="modeAffichage == 4"></app-header-three>
@@ -52,7 +52,7 @@
 
   <app-footer *ngIf="modeAffichage != 5"></app-footer>
   <app-footer-two *ngIf="modeAffichage == 5"></app-footer-two>
-</div>
+<!-- </div> -->
 </mat-sidenav-container>
 
 
