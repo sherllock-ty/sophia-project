@@ -40,15 +40,20 @@
 
         </mat-toolbar-row>
       </mat-toolbar>
+      
+ <div class="fb-customerchat"
+      page_id="710021679027649"
+      logged_in_greeting="Bienvenue, comment pourrions-nous vous aider ? ">
+</div>
+ 
   <div style="padding-top: 55px;">
   <app-header  *ngIf="(modeAffichage==1 || modeAffichage==3) || (modeAffichage != 2  && modeAffichage != 4) &&  (router.url.includes('pages') || router.url.includes('products') || router.url.includes('blog') || router.url.includes('product'))"></app-header>
   <app-header-two *ngIf="modeAffichage == 2"></app-header-two>
   <app-header-three *ngIf="modeAffichage == 4"></app-header-three>
   <app-header-four *ngIf="modeAffichage == 5"></app-header-four>
-
-  <ngx-spinner></ngx-spinner>
+   
+  <ngx-spinner></ngx-spinner> 
   <router-outlet (deactivate)="goTop()"></router-outlet>
-
 
   <app-footer *ngIf="modeAffichage != 5"></app-footer>
   <app-footer-two *ngIf="modeAffichage == 5"></app-footer-two>
