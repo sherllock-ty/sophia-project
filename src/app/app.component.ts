@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,12 +10,11 @@ export class AppComponent {
 
   title = 'ecommerce-sophia-new';
 
-  constructor() {
-  }
-
-
-  ngOnInit() {
+  constructor() {}
+   
+  
+    ngOnInit() {
     window.scroll(0,0);
   }
-
+ 
 }

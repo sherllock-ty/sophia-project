@@ -7,7 +7,7 @@ import { Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationErr
 import { SidebarMenuService } from '../shared/sidebar/sidebar-menu.service';
 import { SidenavMenu } from '../shared/sidebar/sidebar-menu.model';
 import { NgxSpinnerService } from "ngx-spinner";
-
+import { FacebookService, InitParams } from 'ngx-facebook';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -15,6 +15,7 @@ import { NgxSpinnerService } from "ngx-spinner";
 })
 export class MainComponent implements OnInit {
 
+  public pageID = 710021679027649;
   public modeAffichage = 2;
   public sidenavMenuItems:Array<any>;
 
@@ -180,7 +181,9 @@ export class MainComponent implements OnInit {
     }
   ];
 
-  constructor(private spinner: NgxSpinnerService, public router: Router,
+  constructor(
+     private facebookService: FacebookService,
+     private spinner: NgxSpinnerService, public router: Router,
      private cartService: CartService, public sidenavMenuService:SidebarMenuService) {
     this.cartService.getItems().subscribe(shoppingCartItems => this.shoppingCartItems = shoppingCartItems);
     this.router.events.subscribe((event) => {
@@ -189,21 +192,19 @@ export class MainComponent implements OnInit {
         this.spinner.show();
        }
       if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
-        this.spinner.hide();   
+        this.spinner.hide();
         this.url = event.url;
       }
     } )
+    const initParams: InitParams = { xfbml:true, version:'v3.2'};
+    this.facebookService.init(initParams);
   }
 
   ngAfterViewInit() {
   }
 
 
-
-  ngOnInit() {
- 
-    // this.currency = this.currencies[0];
-    // this.flag = this.flags[0];
+  ngOnInit(){  
   }
 
   goTop(){
