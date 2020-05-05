@@ -407,12 +407,12 @@ width: 100% !important;
 *  Home info bar styles
 ****************************************/
 .info-bar{
-  margin-top: 30px;
+  margin-top: 10px;
   border-bottom: 1px solid $grey6;
   .card-wrap{
     padding: 15px 0;
     .mat-card{
-      height: 100px;
+      height: 250px;
       box-shadow: none;
       border-right: 1px solid $grey6;
       &.no-bd {
@@ -458,7 +458,7 @@ line-height: 23px;
 /*  Topbar styles */
 .main-topbar {
   background: $dark-font;
- 
+
  .top-bar {
 
      .widget-text {
@@ -512,7 +512,7 @@ line-height: 23px;
     display: flex;
     flex-direction: row;
     align-items: center;
-   
+
     .top-cart {
       span {
         font-size: 15px;
@@ -1258,7 +1258,7 @@ line-height: 23px;
 .home-header-2 {
   background: $white;
   .logo {
-    padding: 25px 0;
+    padding: 15px 0;
   }
   .search-form {
     width: 80%;
