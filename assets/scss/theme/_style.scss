@@ -1207,6 +1207,11 @@ line-height: 23px;
     font-size: 14.5px;
     }
     .category-contant {
+      mat-icon {
+        margin-top:auto;
+        margin-bottom:auto;
+        margin-left: 5px;
+      }
       ul {
         li {
           display: flex;
@@ -1214,18 +1219,13 @@ line-height: 23px;
     padding-top: 13px;
     padding-bottom: 13px !important;
     border-top: 1px solid $grey8;
-    margin-left: 10px;
-          }
-    mat-icon {
-          margin-left: 5px;
-          padding-top: 11px;
-              }
           .no-brd {
             border-top: none;
           }
         }
       }
     }
+  }
     .btn-sale {
       margin: 20px 10px;
       button {
