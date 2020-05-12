@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material';
 import { CartService } from 'src/app/components/shared/services/cart.service';
 import { SwiperDirective, SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { ProductZoomComponent } from './product-zoom/product-zoom.component';
+// import { setTimeout } from
 
 
 @Component({
@@ -24,6 +25,7 @@ export class ProductDetailsComponent implements OnInit {
   public product            :   Product = {};
   public products           :   Product[] = [];
 
+  public imageSrc: any;
   public image: any;
   public zoomImage: any;
 
@@ -31,6 +33,8 @@ export class ProductDetailsComponent implements OnInit {
 
   index: number;
   bigProductImageIndex = 0;
+  imageToShow: any;
+
 
   constructor(private route: ActivatedRoute, public productsService: ProductService,
      public dialog: MatDialog, private router: Router, private cartService: CartService) {
@@ -38,14 +42,26 @@ export class ProductDetailsComponent implements OnInit {
       const id = +params['id'];
       this.productsService.getProduct(id).subscribe(product => this.product = product)
     });
-   }
+
+  }
 
   ngOnInit() {
-    this.productsService.getProducts().subscribe(product => this.products = product);
+    // this.productsService.getProducts().subscribe(product => {this.products = product ; console.log(product)});
+
+    this.productsService.getImages(2,0).subscribe(image => {
+      this.productsService.createImageFromBlob(image).then(imageFile => {
+        this.imageToShow = imageFile;
+      })
+    });
+    console.log(this.imageToShow)
+
 
 
     this.getRelatedProducts();
   }
+
+
+
 
 
   ngAfterViewInit() {
@@ -100,6 +116,16 @@ export class ProductDetailsComponent implements OnInit {
     this.bigProductImageIndex = index;
   }
 
+  public createImageFromBlob(image: Blob) {
+    let reader = new FileReader();
+    reader.addEventListener("load", () => {
+       this.imageToShow = reader.result;
+    }, false);
+
+    if (image) {
+       reader.readAsDataURL(image);
+    }
+  }
 
 
 

@@ -12,7 +12,7 @@ export class Product {
   price?: number;
   salePrice?: number;
   discount?: number;
-  pictures?: string;
+  pictures?: any[];
   shortDetails?: string;
   description?: string;
   stock?: number;
@@ -29,7 +29,7 @@ export class Product {
     price?: number,
     salePrice?: number,
     discount?: number,
-    pictures?: string,
+    pictures?: any[],
     shortDetails?: string,
     description?: string,
     stock?: number,
