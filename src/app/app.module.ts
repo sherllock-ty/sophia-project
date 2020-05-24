@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoComponent } from './components/demo/demo.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxImgZoomModule } from 'ngx-img-zoom';
+import { FacebookModule } from '@jemys89/ngx-facebook';
 
 import { MainComponent } from './components/main/main.component';
 
@@ -17,7 +18,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { ShopModule } from './components/shop/shop.module';
 import { SharedModule } from './components/shared/shared.module';
 import { GestureConfig } from '@angular/material';
-
 import 'hammerjs';
 
 @NgModule({
@@ -38,7 +38,8 @@ import 'hammerjs';
     ReactiveFormsModule,
     AppRoutingModule,
     NgxImgZoomModule,
-    PagesModule
+    PagesModule,
+    FacebookModule.forRoot()
   ],
   providers: [     {
     provide: HAMMER_GESTURE_CONFIG,

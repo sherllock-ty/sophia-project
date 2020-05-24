@@ -20,7 +20,8 @@ export class BannersComponent implements OnInit {
 
   public getBgImage(index){
     let bgImage = {
-      'background-image': index != null ? "url(" + this.banners[index].image + ")" : "url(https://via.placeholder.com/600x400/ff0000/fff/)"
+      // 'background-image': index != null ? "url(" + this.banners[index].image + ")" : "url(https://via.placeholder.com/600x400/ff0000/fff/)"
+      'background-image': "url(https://via.placeholder.com/600x400/ff0000/fff/)"
     };
     return bgImage;
   }

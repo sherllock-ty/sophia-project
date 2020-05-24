@@ -11,10 +11,14 @@ export class PopularProductsComponent implements OnInit {
 
   public products: Product[];
   public product            :   Product = {};
- 
+  imageToShow: any;
+
    constructor(private productService: ProductService) { }
- 
+
    ngOnInit() {
-     this.productService.getProducts().subscribe(product => this.products = product);
+    this.productService.getProducts().subscribe(product => this.products = product);
+   // this.productService.getImages()
+
    }
+
 }

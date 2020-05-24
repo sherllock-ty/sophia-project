@@ -5,8 +5,8 @@ $theme-main: rgb(248, 123, 6);
 
 
 // My classes : 
-.color-icon #text-color{
-   
+.color-icon{
+    color : $theme-main;
 }
 .lock-bar{
     position: fixed;
@@ -19,8 +19,6 @@ $theme-main: rgb(248, 123, 6);
     max-width:100%;
     height:auto;
 }
-#text-color{
-     color : $theme-main;
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: #000;
+.stylish{
+    border: 1px solid $grey8;
 }

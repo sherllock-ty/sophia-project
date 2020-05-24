@@ -14,7 +14,8 @@
                        <button mat-icon-button  fxHide="false" fxHide.gt-md>
                           <mat-icon>fullscreen</mat-icon>
                        </button>
-                       <img [src]="product.pictures[bigProductImageIndex].big"/>
+                       <!-- <img [src]="product.pictures[bigProductImageIndex]"/> -->
+                       <img [src]="imageToShow"/>
                     </div>
                     <a (click)="openProductDialog(product, bigProductImageIndex)" style="cursor: pointer;"><mat-icon>zoom_in</mat-icon></a>
                  </mat-card>
@@ -25,7 +26,8 @@
                         <div class="swiper-wrapper">
                             <div *ngFor="let image of product?.pictures; let i=index" class="swiper-slide">
                                 <mat-card (click)="selectImage(i)" class="p-1">
-                                    <img [src]="image.small" class="swiper-lazy"/>
+                                    <!-- remplacez ici par la liste d'image du produit -->
+                                    <img [src]="imageToShow" class="swiper-lazy"/>
                                     <div class="swiper-lazy-preloader"></div>
                                 </mat-card>
                             </div>
@@ -179,9 +181,9 @@
             </mat-card>
             <div  class="color-icon" style="padding-top: 25px;">
             <mat-card>
-               
+
              <app-formulaire></app-formulaire>
-                 
+
             </mat-card>
          </div>
          </div>
