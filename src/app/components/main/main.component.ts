@@ -7,7 +7,7 @@ import { Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationErr
 import { SidebarMenuService } from '../shared/sidebar/sidebar-menu.service';
 import { SidenavMenu } from '../shared/sidebar/sidebar-menu.model';
 import { NgxSpinnerService } from "ngx-spinner";
-import { FacebookService, InitParams } from 'ngx-facebook';
+import { FacebookService, InitParams } from '@jemys89/ngx-facebook';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',

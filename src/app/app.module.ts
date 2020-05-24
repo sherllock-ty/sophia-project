@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoComponent } from './components/demo/demo.component';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxImgZoomModule } from 'ngx-img-zoom';
-import { FacebookModule } from 'ngx-facebook';
+import { FacebookModule } from '@jemys89/ngx-facebook';
 
 import { MainComponent } from './components/main/main.component';
 

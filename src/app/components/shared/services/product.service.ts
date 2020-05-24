@@ -33,45 +33,37 @@ export class ProductService {
 
   }
 
-  public getImages(id, imageIndex) {
+  getPicture(product){
+    return 'http://localhost:1337' + product.pictures[0].url
+  }
+
+  public getImageById(id: number, imageIndex: number) {
     return this.getProduct(id).pipe(
       switchMap(product => {
         return this.httpClient
           .get('http://localhost:1337' + product.pictures[imageIndex].url, { responseType: 'blob' })
       })
-      // .subscribe(imageDate => {
-      //   this.createImageFromBlob(imageDate);
-
-      // }, error => {
-      //   console.log(error);
-      // })
-    );
+    ).toPromise();
   }
 
+  public getImage(product: Product, imageIndex: number) {
+    console.log(product);
 
-  public sendImage(id, index) {
-    this.getImages(id, index);
-    return this.imageFile;
+    return this.httpClient
+      .get('http://localhost:1337' + product.pictures[imageIndex].url, { responseType: 'blob' }).toPromise();
+
   }
 
   public createImageFromBlob(image: Blob) {
     const reader = new FileReader();
-    let imageFile;
     return new Promise(resolve => {
-    if (image) {
-      reader.readAsDataURL(image);
-    }
-
+      if (image) {
+        reader.readAsDataURL(image);
+      }
       reader.addEventListener('load', () => {
-        imageFile = reader.result;
-        // console.log(this.imageFile)
-        resolve(imageFile)
+        resolve(reader.result);
       }, false)
     });
-
-
-
-    // return this.imageFile;
   }
 
   public banners(): Observable<any[]> {
@@ -92,14 +84,18 @@ export class ProductService {
 
   // Get Products By Id
   public getProduct(id: number): Observable<Product> {
-    return this.products().pipe(map(items => {
-      return items.find((item: Product) => {
-        return item.id === id;
-      });
-    }));
+    // return this.products().pipe(map(items => {
+    //   return items.find((item: Product) => {
+    //     return item.id === id;
+    //   });
+    // }));
     // return this.products.find(product=> product.id === id);
 
-    //return this.httpClient.get<Product>(this._url + '/products/' + id + '.json');
+    return this.httpClient.get<Product>(this._url + '/products/' + id);
+  }
+
+  public getProductt(id: number) {
+    return this.httpClient.get<Product>(this._url + '/products/' + id).toPromise();
   }
 
 
