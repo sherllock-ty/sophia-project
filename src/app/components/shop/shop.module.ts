@@ -67,7 +67,7 @@ import { HomeFiveComponent } from './home-five/home-five.component';
     ReactiveFormsModule,
     FlexLayoutModule,
     NgxPaginationModule,
-    NgxImageZoomModule.forRoot() // <-- Add this line
+    NgxImageZoomModule // <-- Add this line
 
   ],
   exports: [
